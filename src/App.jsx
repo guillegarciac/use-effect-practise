@@ -12,8 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello world</h1>
-      <button onClick={handleShow}>{showCounter ? 'Hide' : 'Show'}</button> 
+      <h1>Guille's Counter</h1>
+      <button onClick={handleShow}>{showCounter ? 'Hide Counter' : 'Show Counter'}</button> 
       {showCounter && <Counter />}
     </div>
   );

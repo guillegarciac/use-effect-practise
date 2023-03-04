@@ -19,6 +19,13 @@ export default function Counter() {
   useEffect(() => {
     // set the initial count to a random number between 0 and 10
     setCount(Math.floor(Math.random() * 10));
+
+    return () => {
+      console.log('All clean here. Count:', count, 'Class:', dynamicClass);
+      setCount(0);
+      setDynamicClass('text');
+    }
+
   }, []);
 
   // Third iteration
