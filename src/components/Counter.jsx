@@ -23,6 +23,19 @@ export default function Counter() {
 
   // Third iteration
 
+  useEffect(() => {
+    // update the dynamic class based on the current value of count
+    if (count <= 0) {
+      setDynamicClass('red');
+    } else if (count >= 1 && count <= 5) {
+      setDynamicClass('orange');
+    } else {
+      setDynamicClass('green');
+    }
+  }, [count]);
+
+
+
   return (
     <div>
       <p>Counter: <span className={dynamicClass}>{count}</span></p>
