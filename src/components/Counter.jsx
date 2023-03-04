@@ -16,6 +16,11 @@ export default function Counter() {
 
   // Second and Fourth iteration
 
+  useEffect(() => {
+    // set the initial count to a random number between 0 and 10
+    setCount(Math.floor(Math.random() * 10));
+  }, []);
+
   // Third iteration
 
   return (
